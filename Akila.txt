@@ -1,1 +1,22 @@
-akkii
+let a=[9,1000,7,100,6,997]
+let values=[]
+for(let i=0; i<a.length-1; i++){
+    for(let j=i+1; j<a.length; j++){
+        if(a[i]<a[j]){
+            values.push(a[j]-a[i],i,j)
+            
+        }
+    }
+}
+let max=values[0]
+let b,c
+for(let i=0; i<values.length; i++){
+   if(values[i]>=max)
+   {
+       max=values[i]
+       b=values[i+1]
+       c=values[i+2]
+    }
+}
+console.log(max,a[b],a[c])
+//console.log("The maximum profit that can be obtained is ",max,"by buying the prodcut on ",b,"th day for ",a[b],"and selling it on ",c,"th day for ",a[c])
