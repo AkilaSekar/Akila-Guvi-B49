@@ -20,9 +20,9 @@
           //console.log(xhr.responseText);
           var response = JSON.parse(xhr.responseText);
           console.log(response.length);
-          // for (var i = 0; i < response.length; i++) {
-          //   console.log(response[i].fllags);
-          // }
+           for (var i = 0; i < response.length; i++) {
+            console.log(response[i].flags);
+           }
         } else {
           //Request failed
           console.log("Request failed", xhr.status);
