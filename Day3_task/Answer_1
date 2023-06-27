@@ -1,11 +1,8 @@
 
 Compare two objects:
   
-  const obj1 = {name:"Person 1","age":5};
-
+const obj1 = {name:"Person 1","age":5};
 const obj2 = {"age":5,name:"Person 1"};
-
-
 function compareObjects() {
   if(Object.keys(obj1).length != Object.keys(obj2).length) {
     return false;
