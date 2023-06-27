@@ -21,13 +21,7 @@
           var response = JSON.parse(xhr.responseText);
           console.log(response.length);
            for (var i = 0; i < response.length; i++) {
-            console.log(response[i].name.common);
-            console.log(response[i].name.nativeName);
-            console.log(response[i].name.official);
-            console.log(response[i].region);
-            console.log(response[i].subregion);
-            console.log(response[i].population);
-            console.log(response[i].flags.svg);
+            console.log(response[i].flags);
            }
         } else {
           //Request failed
