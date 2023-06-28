@@ -1,9 +1,10 @@
 HTTP:
+
         Hypertext Transfer Protocol (HTTP) is a method for encoding and transporting information between a web browser and a web server. 
         HTTP is the primary protocol for transmission of information across the Internet.
 
 HTTP/1.1:
-        => It allows the reusage of data.
+        => It allows the reusage of datas.
         => HTTP/1.1 was created in 1997 
         => Multiplexing:
              HTTP/1.1 loads resources one after the other, so if one resource cannot be loaded, it blocks all the other resources behind it
