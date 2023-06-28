@@ -21,11 +21,11 @@
           var response = JSON.parse(xhr.responseText);
           console.log(response.length);
            for (var i = 0; i < response.length; i++) {
-            console.log(response[i].flags.png);
+            console.log(response[i].flag);
            }
            
         } else {
-          //Request failed
+          //Request failed`
           console.log("Request failed", xhr.status);
         }
       };
