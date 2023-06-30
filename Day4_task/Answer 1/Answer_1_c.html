@@ -1,0 +1,38 @@
+<html>
+    <head>
+        <title>
+           Sum of all numbers in an array
+        </title>
+    </head>
+    <body>
+        <script>
+            let arrayValues=[23,45,6,78,90,65,43];
+            let sum=0;
+
+
+            // sum of elements in array using anonymous function
+            console.log("-----------------Anonymous function-----------------");
+            let sumValues= function(){
+                for(let i=0; i<arrayValues.length; i++){
+                    sum+=arrayValues[i];
+                }
+                return sum;
+            }
+            console.log(sumValues());
+            sum=0;
+
+
+             // sum of elements in array using IIFE function
+            console.log("-----------------IIFE function-----------------");
+            (function(){
+                for(let i=0; i<arrayValues.length; i++){
+                    sum+=arrayValues[i];
+                }
+                console.log(sum);
+            })();
+
+
+
+        </script>
+    </body>
+</html>
