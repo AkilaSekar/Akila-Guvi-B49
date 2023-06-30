@@ -1,0 +1,26 @@
+<html>
+    <head>
+        <title>Odd Numbers in an array </title>
+    </head>
+    <body>
+        <script>
+            // Array declarations
+            let arrayValues=[1,2,3,4,5,6,7,8,9,10];
+            let oddValues=[];
+
+
+            //To find the odd numbers in an array using arrow function
+            var oddFunction = ()=>{
+                for(let i=0; i<arrayValues.length; i++){
+                if((arrayValues[i]%2)!==0){
+                    oddValues.push(arrayValues[i]);
+                }
+            }
+            console.log("-------The odd values using arrow function are:-------- ");
+            console.log(oddValues);
+            }
+            oddFunction();
+            
+        </script>
+    </body>
+</html>
