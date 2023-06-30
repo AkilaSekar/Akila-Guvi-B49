@@ -1,0 +1,27 @@
+<html>
+  <head>
+    <title>Palindromes in an array</title>
+  </head>
+  <body>
+    <script>
+    //your JS code goes here
+    
+    var words = ["dog", "Akila", "madam", "malayalam", "mom"];
+    var palindromes = [];
+    let arrowPalindrome= function() {
+        console.log("-------------------------------Arrow Function---------------------");  
+        for (var i = 0; i < words.length; i++) {
+          var word = words[i];
+          var reversed = word.split('').reverse().join('');
+
+          if (word === reversed) {
+            palindromes.push(word);
+          }
+        }
+
+        console.log( palindromes);
+      }
+      arrowPalindrome();
+    </script>
+  </body>
+</html>

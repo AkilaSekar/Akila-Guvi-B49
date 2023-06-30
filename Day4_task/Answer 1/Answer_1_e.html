@@ -1,0 +1,46 @@
+<html>
+  <head>
+    <title>Palindromes in an array</title>
+  </head>
+  <body>
+    <script>
+    var words = ["dog", "Akila", "madam", "malayalam", "mom"];
+    var palindromes = [];
+
+    // Palindrome using anonymous function
+    let anonPalindrome= function() {
+        console.log("-------------------------------Anonymous Function---------------------");  
+        for (var i = 0; i < words.length; i++) {
+          var word = words[i];
+          var reversed = word.split('').reverse().join('');
+
+          if (word === reversed) {
+            palindromes.push(word);
+          }
+        }
+
+        console.log( palindromes);
+      }
+      anonPalindrome();
+      palindromes=[];
+
+
+      // Palindrome using IIFE function
+      (function() {
+          console.log("--------------------------------IIFE Function---------------------");  
+          for (var i = 0; i < words.length; i++) {
+            var word = words[i];
+            var reversed = word.split('').reverse().join('');
+
+            if (word === reversed) {
+              palindromes.push(word);
+            }
+          }
+
+        console.log( palindromes);
+      })();
+
+
+    </script>
+  </body>
+</html>

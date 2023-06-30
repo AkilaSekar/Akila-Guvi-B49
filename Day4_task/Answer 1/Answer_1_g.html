@@ -1,0 +1,41 @@
+<html>
+  <head>
+    <title>Unique values in an array</title>
+  </head>
+  <body>
+    <script>
+    //your JS code goes here
+    
+        var array = [1, 2, 3, 2, 4, 1, 5, 4];
+        var uniqueArray = [];
+
+        //finding the unique values in an array unsing anonymous function
+        var uniqueFunction=function(){
+          console.log("-------------------------------Anonymous Function---------------------");  
+              for (var i = 0; i < array.length; i++) {
+                if (uniqueArray.indexOf(array[i]) === -1) {
+                  uniqueArray.push(array[i]);
+                }
+              }
+              console.log(uniqueArray);
+            }
+        uniqueFunction();
+        uniqueArray=[];
+
+
+
+          //finding the unique values in an array using IIFE function
+          (function() {
+            console.log("-------------------------------IIFE Function---------------------");  
+            for (var i = 0; i < array.length; i++) {
+              if (uniqueArray.indexOf(array[i]) === -1) {
+                uniqueArray.push(array[i]);
+              }
+            }
+
+            console.log(uniqueArray);
+      })();
+
+    </script>
+  </body>
+</html>

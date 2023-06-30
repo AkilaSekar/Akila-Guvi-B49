@@ -1,0 +1,45 @@
+<html>
+  <head>
+    <title>Median</title>
+  </head>
+  <body>
+    <script>
+    
+    var arr1 = [1, 3, 5];
+    var arr2 = [2, 4, 6];
+    var merged = arr1.concat(arr2).sort(function(a, b) {
+    return a - b;
+      });
+    var length = merged.length;
+    var median;
+
+    //medain using anonymous function
+    let anonMedian=function() {
+      console.log("-------------------------------Anonymous Function---------------------");  
+        if (length % 2 === 0) {
+          median = (merged[length / 2 - 1] + merged[length / 2]) / 2;
+        } else {
+          median = merged[Math.floor(length / 2)];
+        }
+
+          console.log(median);
+          }
+      anonMedian();
+      median=0;
+    
+
+    //median using IIFE function
+    (function() {
+      console.log("-------------------------------IIFE Function---------------------");  
+        if (length % 2 === 0) {
+          median = (merged[length / 2 - 1] + merged[length / 2]) / 2;
+        } else {
+          median = merged[Math.floor(length / 2)];
+        }
+
+  console.log(median);
+})();
+
+    </script>
+  </body>
+</html>
