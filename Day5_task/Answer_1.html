@@ -1,0 +1,80 @@
+<html>
+  <head>
+    <title>JSON iteration using different for loops</title>
+  </head>
+  <body>
+    <script>
+    //your JS code goes here
+
+    let resumeData={
+    "Name":"Akila Sekar",
+    "DOB":"02-11-1997",
+    "Age":25,
+    "Nationality":"Indian",
+    "Languages":[
+        "Tamil","English"
+        ],
+    "Education":[
+                {"School":"Cluny",
+                "Details":[{
+                        "Class_10_score":96,
+                        "Year_of_passing":2013
+                        },
+                         {
+                        "Class_12_score":96,
+                        "Year_of_passing":2015
+                         }
+                    ]
+                },
+                {"College":"PSG College Of Technology",
+                 "Percentage":80,
+                 "Year_of_passing":2019
+                }
+            ],
+    "Interest":[
+        "Javascript",
+        "HTML",
+        "CSS"
+        ]
+    
+
+    
+};
+// printing the whole object
+console.log(resumeData);
+
+
+
+//for in
+console.log("---------------------------for in loop---------------------------");
+for (var key in resumeData) {
+  
+    console.log(key + ": " + resumeData[key]);
+  
+}
+
+
+// for of
+console.log("---------------------------for of loop---------------------------");
+var entries = Object.entries(resumeData);
+
+for (var [key, value] of entries) {
+  console.log(key + ": " + value);
+}
+
+
+
+
+// foreach
+console.log("---------------------------foreach loop---------------------------");
+var entries = Object.entries(resumeData);
+
+entries.forEach(function([key, value]) {
+  console.log(key + ": " + value);
+});
+
+
+
+    </script>
+  </body>
+</html>
