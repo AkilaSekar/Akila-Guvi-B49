@@ -1,0 +1,37 @@
+<html>
+    <head>
+        <title>
+            Convert strings to title caps
+        </title>
+    </head>
+    <body>
+        <script>
+            let str1=" ZEN CLASSES DAILY TASKS- Anonymuos Function";
+            let str2=" ZEN CLASSES DAILY TASKS- IIFE Function";
+            
+            //Convert strings to title caps using anonymous function
+            console.log("--------------------Anonymous Function--------------------");
+            let convertString= function() {
+                str1 = str1.toLowerCase().split(' ');
+                for (var i = 0; i < str1.length; i++) {
+                    str1[i] = str1[i].charAt(0).toUpperCase() + str1[i].slice(1);
+                }
+                console.log("The converted string is ",str1.join(' '));
+                }
+             convertString();
+
+
+            //Convert strings to title caps using IIFE function
+            console.log("--------------------IIFE Function--------------------");
+            (function() {
+                str2 = str2.toLowerCase().split(' ');
+                for (var i = 0; i < str2.length; i++) {
+                    str2[i] = str2[i].charAt(0).toUpperCase() + str2[i].slice(1);
+                }
+                console.log("The converted string is ",str2.join(' '));
+                }
+            )(); 
+
+        </script>
+    </body>
+</html>
