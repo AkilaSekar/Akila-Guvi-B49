@@ -21,4 +21,5 @@ let getpg=[ {title:"The Englsih War", studio: "Universal Pictures", rating: "G"}
             {title:"Science-The Ruler", studio: "Columbia Pictures", rating: "PG13"},
             {title:"The Queen", studio: "Disney", rating: "PG"}
         ];
+console.log(obj);
 console.log(obj.getPG(getpg));
