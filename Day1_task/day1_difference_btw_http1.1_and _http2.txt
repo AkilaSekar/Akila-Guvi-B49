@@ -14,7 +14,7 @@ HTTP/1.1:
         => It uses requests resource Inlining for use getting multiple pages
 
 
-HTTP/2:
+HTTP/2: 
         => Enables the transfer of large amount of data/information at the same time .
         => HTTP/2 was created in 2015
         => Multiplexing:
