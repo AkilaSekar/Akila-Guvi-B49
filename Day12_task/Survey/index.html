@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Survey Form</title>
+  <!-- Add Bootstrap CSS link -->
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+  <style>
+    /* Custom CSS to add color to alternate lines */
+    .colored-div:nth-child(even) {
+      background-color: #f2f2f2; /* Set the background color for even rows */
+    }
+  </style>
+</head>
+
+<body>
+  <div class="container">
+    <h1 class="mt-4">Survey Form</h1>
+    <form>
+      <!-- Question 1 -->
+      <div class="form-group">
+        <label for="q1">Question 1: What is your name?</label>
+        <input type="text" class="form-control" id="q1" name="name" required>
+      </div>
+
+      <!-- Question 2 -->
+      <div class="form-group">
+        <label for="q2">Question 2: What is your age?</label>
+        <input type="number" class="form-control" id="q2" name="age" min="18" max="100" required>
+      </div>
+
+      <!-- Question 3 -->
+      <div class="form-group">
+        <label for="q3">Question 3: What is your gender?</label>
+        <div class="form-check">
+          <input class="form-check-input" type="radio" name="gender" id="q3_male" value="male" required>
+          <label class="form-check-label" for="q3_male">Male</label>
+        </div>
+        <div class="form-check">
+          <input class="form-check-input" type="radio" name="gender" id="q3_female" value="female" required>
+          <label class="form-check-label" for="q3_female">Female</label>
+        </div>
+        <div class="form-check">
+          <input class="form-check-input" type="radio" name="gender" id="q3_other" value="other" required>
+          <label class="form-check-label" for="q3_other">Other</label>
+        </div>
+      </div>
+
+      <!-- Question 4 -->
+      <div class="form-group">
+        <label for="q4">Question 4: Select your favorite programming languages (multiple choices allowed)</label>
+        <div class="form-check">
+          <input class="form-check-input" type="checkbox" name="languages[]" id="q4_html" value="HTML">
+          <label class="form-check-label" for="q4_html">HTML</label>
+        </div>
+        <div class="form-check">
+          <input class="form-check-input" type="checkbox" name="languages[]" id="q4_css" value="CSS">
+          <label class="form-check-label" for="q4_css">CSS</label>
+        </div>
+        <div class="form-check">
+          <input class="form-check-input" type="checkbox" name="languages[]" id="q4_js" value="JavaScript">
+          <label class="form-check-label" for="q4_js">JavaScript</label>
+        </div>
+        <div class="form-check">
+          <input class="form-check-input" type="checkbox" name="languages[]" id="q4_python" value="Python">
+          <label class="form-check-label" for="q4_python">Python</label>
+        </div>
+      </div>
+
+      <!-- Question 5 -->
+      <div class="form-group">
+        <label for="q5">Question 5: How would you rate your overall experience with our service?</label>
+        <select class="form-control" id="q5" name="experience" required>
+          <option value="">Select an option</option>
+          <option value="excellent">Excellent</option>
+          <option value="good">Good</option>
+          <option value="average">Average</option>
+          <option value="poor">Poor</option>
+        </select>
+      </div>
+
+      <form>
+
+      
+        <div class="row">
+          <div class="col-1">
+            <p></p>
+          </div>
+          <div class="col-2">
+            <p>Unsatisfied</p>
+          </div>
+          <div class="col-2">
+            <p>Neutral</p>
+          </div>
+          <div class="col-2">
+            <p>Satisfied</p>
+          </div>
+          <div class="col-2">
+            <p>Very Satisfied</p>
+          </div>
+
+        </div>
+      <div class="form-group colored-div">
+        <label>Question 1</label>
+        <div class="form-check form-check-inline col-2">
+          <input class="form-check-input" type="radio" name="question2" id="option4" value="option4" required>
+        </div>
+        <div class="form-check form-check-inline col-2">
+          <input class="form-check-input" type="radio" name="question2" id="option5" value="option5" required>
+        </div>
+        <div class="form-check form-check-inline col-2">
+          <input class="form-check-input" type="radio" name="question2" id="option6" value="option6" required>
+        </div>
+        <div class="form-check form-check-inline col-2">
+          <input class="form-check-input" type="radio" name="question2" id="option6" value="option6" required>
+        </div>
+        <!-- Add more options for question 2 -->
+      </div>
+      <div class="form-group colored-div">
+        <label>Question 2</label>
+        <div class="form-check form-check-inline col-2">
+          <input class="form-check-input" type="radio" name="question2" id="option4" value="option4" required>
+        </div>
+        <div class="form-check form-check-inline col-2">
+          <input class="form-check-input" type="radio" name="question2" id="option5" value="option5" required>
+        </div>
+        <div class="form-check form-check-inline col-2">
+          <input class="form-check-input" type="radio" name="question2" id="option6" value="option6" required>
+        </div>
+        <div class="form-check form-check-inline col-2">
+          <input class="form-check-input" type="radio" name="question2" id="option6" value="option6" required>
+        </div>
+        <!-- Add more options for question 2 -->
+      </div>
+
+      <div class="form-group colored-div">
+        <label>Quetsion 3</label>
+        <div class="form-check form-check-inline col-2">
+          <input class="form-check-input" type="radio" name="question2" id="option4" value="option4" required>
+        </div>
+        <div class="form-check form-check-inline col-2">
+          <input class="form-check-input" type="radio" name="question2" id="option5" value="option5" required>
+        </div>
+        <div class="form-check form-check-inline col-2">
+          <input class="form-check-input" type="radio" name="question2" id="option6" value="option6" required>
+        </div>
+        <div class="form-check form-check-inline col-2">
+          <input class="form-check-input" type="radio" name="question2" id="option6" value="option6" required>
+        </div>
+        <!-- Add more options for question 2 -->
+      </div>
+
+      <div class="form-group colored-div">
+        <label>Quetsion 4</label>
+        <div class="form-check form-check-inline col-2">
+          <input class="form-check-input" type="radio" name="question2" id="option4" value="option4" required>
+        </div>
+        <div class="form-check form-check-inline col-2">
+          <input class="form-check-input" type="radio" name="question2" id="option5" value="option5" required>
+        </div>
+        <div class="form-check form-check-inline col-2">
+          <input class="form-check-input" type="radio" name="question2" id="option6" value="option6" required>
+        </div>
+        <div class="form-check form-check-inline col-2">
+          <input class="form-check-input" type="radio" name="question2" id="option6" value="option6" required>
+        </div>
+        <!-- Add more options for question 2 -->
+      </div>
+</form>
+
+      <!-- Question 6 -->
+      <div class="form-group">
+        <label for="q6">Question 6: Any additional comments or feedback?</label>
+        <textarea class="form-control" id="q6" name="comments" rows="4"></textarea>
+      </div>
+
+      <!-- Submit Button -->
+      <button type="submit" class="btn btn-primary">Submit</button>
+    </form>
+  </div>
+
+  <!-- Add Bootstrap JS scripts -->
+  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.0.7/dist/umd/popper.min.js"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+
+</html>
