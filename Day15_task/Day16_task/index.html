@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Countdown</title>
+  <style>
+    div{
+        text-align: center;
+        background-color: aqua;
+        font-size:50px;
+        color: blueviolet;
+        width: 300px;
+        height: 300px;
+    }
+  </style>
+</head>
+<body>
+  <div id="countdown"></div>
+  
+
+  <script>
+    // Function to create the countdown
+    function countdown() {
+      var count = 10;
+      var countdownElement = document.getElementById('countdown');
+
+      var interval = setInterval(function() {
+        countdownElement.innerHTML = count;
+        count--;
+
+        if (count < 0) {
+          clearInterval(interval);
+          countdownElement.innerHTML = "Happy Independence Day";
+        }
+      }, 1000); // 1000ms = 1 second
+    }
+
+    // Call the countdown function when the page loads
+    window.onload = function() {
+      countdown();
+    };
+  </script>
+</body>
+</html>
