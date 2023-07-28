@@ -1,14 +1,14 @@
 
 
-// const apiURL="https://restcountries.com/v3.1/all";
+const apiURL="https://restcountries.com/v3.1/all";
 
-// fetch(apiURL)
-// .then((response)=>{
-//     if(response.status===200){
-//         return response.json();
-//     }
-// })
-// .then((val)=>{
+fetch(apiURL)
+.then((response)=>{
+    if(response.status===200){
+        return response.json();
+    }
+})
+.then((val)=>{
 
 //     const parentDiv =document.createElement('div');
 //     document.body.append(parentDiv);
@@ -52,44 +52,80 @@
 //     parentDiv.appendChild(parentDiv5);
 
   
-//     for(let i=0; i<val.length; i++){
-//     //     console.log("Country Name:",val[i].name.common);
-//     //     console.log("Capital:",val[i].capital);
-//     //     console.log("Flag:",val[i].flag);
-//     //     console.log("Continent:",val[i].region);
-//     //     console.log("Country Code:x",val[i].cca3);
-//     if(val[i].name.common=="India"){
-//         const ele=document.createElement("div");
-//         ele.innerText=val[i].capital;
-//         ele.innerHTML=val[i].flag;
-//         document.body.append(ele);
+    for(let i=0; i<val.length; i++){
+    //     console.log("Country Name:",val[i].name.common);
+    //     console.log("Capital:",val[i].capital);
+    //     console.log("Flag:",val[i].flag);
+    //     console.log("Continent:",val[i].region);
+    //     console.log("Country Code:x",val[i].cca3);
+    if(val[i].name.common=="Peru"){
+        // const ele=document.createElement("div");
+        // ele.innerText=val[i].capital;
+        // // ele.innerHTML=val[i].flag;
+        // document.body.append(ele);
+
+        console.log("Country Name:",val[i].name.common);
+        console.log("Capital:",val[i].capital);
+        console.log("Flag:",val[i].flag);
+        console.log("Continent:",val[i].region);
+        console.log("Country Code:x",val[i].cca3);
+        console.log("Lat Long:", val[i].latlng[0],val[i].latlng[1]);
+
+
+
+        var xhr = new XMLHttpRequest();
+
+        //Define HTTP method and URL
+        var method = "GET";
+        // var url = "https://restcountries.com/v3.1/all";
+        var lat = val[i].latlng[0];
+        var long = val[i].latlng[1];
+        var url = `https://api.openweathermap.org/data/2.5/weather?lat=${lat}&lon=${long}&appid=37ba9824a231c697643e4a57ef092cf6`;
+  
+        //Open the request
+        xhr.open(method, url);
+  
+        xhr.onload = function () {
+          if (xhr.status === 200) {
+            //Request was successful
+            var weatherData = JSON.parse(xhr.responseText);
+            console.log(weatherData);
+          } else {
+            //Request failed
+            console.log("Request failed", xhr.status);
+          }
+        };
+  
+        //send the request
+        xhr.send();
+
     
-//     }
-//   }    
-// })
-// .catch((err)=>{
-//     console.log("Error:",err);
-// })
+    }
+  }    
+})
+.catch((err)=>{
+    console.log("Error:",err);
+})
 
 
 
-var body = document.getElementsByTagName("body")[0];
-for (var y=0; y<2; y++){ // creates rows    
-    var createRow = document.createElement("div");
-      for (var x=0; x<4; x++){ // creates columns
-      var createColumn = document.createElement("div");
-        var createCard = document.createElement("div");
-          var createText = document.createElement("p");
-            var cellText = document.createTextNode("test");
+// var body = document.getElementsByTagName("body")[0];
+// for (var y=0; y<2; y++){ // creates rows    
+//     var createRow = document.createElement("div");
+//       for (var x=0; x<4; x++){ // creates columns
+//       var createColumn = document.createElement("div");
+//         var createCard = document.createElement("div");
+//           var createText = document.createElement("p");
+//             var cellText = document.createTextNode("test");
 
-            createText.appendChild(cellText);
-            createCard.appendChild(createText);
-            createColumn.appendChild(createCard);
-            createRow.appendChild(createColumn);
-            body.appendChild(createRow);
+//             createText.appendChild(cellText);
+//             createCard.appendChild(createText);
+//             createColumn.appendChild(createCard);
+//             createRow.appendChild(createColumn);
+//             body.appendChild(createRow);
 
-        createCard.setAttribute("class", "card");
-      createColumn.setAttribute("class", "column");
-      }
-    createRow.setAttribute("class", "row");
-  }
+//         createCard.setAttribute("class", "card");
+//       createColumn.setAttribute("class", "column");
+//       }
+//     createRow.setAttribute("class", "row");
+//   }
