@@ -9,123 +9,75 @@ fetch(apiURL)
     }
 })
 .then((val)=>{
+    const myDiv = document.createElement("div");
+    myDiv.setAttribute("class","container");
+    myDiv.style.backgroundColor="darkslategray";
+    myDiv.style.margin="10px";
+    myDiv.style.padding="20px";
+    document.body.append(myDiv);  
 
-//     const parentDiv =document.createElement('div');
-//     document.body.append(parentDiv);
-
-//     const parentDiv6 =document.createElement('div');
-//     parentDiv6.setAttribute("class","custom-container row col-md-3 card card-header card-body");
-//     parentDiv6.setAttribute("id","IN");  
-//     parentDiv6.innerText="Helo World!!"
-//     parentDiv.appendChild(parentDiv6);
-
-
-//     const parentDiv1 =document.createElement('div');
-//     parentDiv1.setAttribute("class","custom-container row col-md-3 card card-header card-body");
-//     parentDiv1.setAttribute("id","IN");  
-//     parentDiv1.innerText="Helo World!!"
-//     parentDiv.appendChild(parentDiv1);
-
-//     const parentDiv2 =document.createElement('div');
-//     parentDiv2.setAttribute("class","custom-container row col-md-3 card card-header card-body");
-//     parentDiv2.setAttribute("id","IN");  
-//     parentDiv2.innerText="Helo World!!"
-//     parentDiv.appendChild(parentDiv2);
-
-
-//     const parentDiv3 =document.createElement('div');
-//     parentDiv3.setAttribute("class","custom-container row col-md-3 card card-header card-body");
-//     parentDiv3.setAttribute("id","IN");  
-//     parentDiv3.innerText="Helo World!!"
-//     parentDiv.appendChild(parentDiv3);
-
-//     const parentDiv4 =document.createElement('div');
-//     parentDiv4.setAttribute("class","custom-container row col-md-3 card card-header card-body");
-//     parentDiv4.setAttribute("id","IN");  
-//     parentDiv4.innerText="Helo World!!"
-//     parentDiv.appendChild(parentDiv4);
-
-//     const parentDiv5 =document.createElement('div');
-//     parentDiv5.setAttribute("class","custom-container row col-md-3 card card-header card-body");
-//     parentDiv5.setAttribute("id","IN");  
-//     parentDiv5.innerText="Helo World!!"
-//     parentDiv.appendChild(parentDiv5);
-
-  
-    for(let i=0; i<val.length; i++){
-    //     console.log("Country Name:",val[i].name.common);
-    //     console.log("Capital:",val[i].capital);
-    //     console.log("Flag:",val[i].flag);
-    //     console.log("Continent:",val[i].region);
-    //     console.log("Country Code:x",val[i].cca3);
-    if(val[i].name.common=="Peru"){
-        // const ele=document.createElement("div");
-        // ele.innerText=val[i].capital;
-        // // ele.innerHTML=val[i].flag;
-        // document.body.append(ele);
-
-        console.log("Country Name:",val[i].name.common);
-        console.log("Capital:",val[i].capital);
-        console.log("Flag:",val[i].flag);
-        console.log("Continent:",val[i].region);
-        console.log("Country Code:x",val[i].cca3);
-        console.log("Lat Long:", val[i].latlng[0],val[i].latlng[1]);
-
-
-
-        var xhr = new XMLHttpRequest();
-
-        //Define HTTP method and URL
-        var method = "GET";
-        // var url = "https://restcountries.com/v3.1/all";
-        var lat = val[i].latlng[0];
-        var long = val[i].latlng[1];
-        var url = `https://api.openweathermap.org/data/2.5/weather?lat=${lat}&lon=${long}&appid=37ba9824a231c697643e4a57ef092cf6`;
-  
-        //Open the request
-        xhr.open(method, url);
-  
-        xhr.onload = function () {
-          if (xhr.status === 200) {
-            //Request was successful
-            var weatherData = JSON.parse(xhr.responseText);
-            console.log(weatherData);
-          } else {
-            //Request failed
-            console.log("Request failed", xhr.status);
-          }
-        };
-  
-        //send the request
-        xhr.send();
-
+    const myDiv1= document.createElement('div');
+    myDiv1.setAttribute("class","row");
+    myDiv.appendChild(myDiv1);
     
+for(let i=0; i<val.length; i++){
+
+  if(val[i].name.common=="India" ||  val[i].name.common=="China" ||val[i].name.common=="Russia"  ){
+    //if(i<3){
+    var lat = val[i].latlng[0];
+    var long = val[i].latlng[1];
+    var url = `https://api.openweathermap.org/data/2.5/weather?lat=${lat}&lon=${long}&appid=37ba9824a231c697643e4a57ef092cf6`;
+   
+    const myDiv2= document.createElement('div');
+    myDiv2.setAttribute("class","col-lg-4 col-sm-12");
+    myDiv1.appendChild(myDiv2);
+
+    const myDiv3 = document.createElement("div");
+    myDiv3.setAttribute("class","card card-header card-body");
+    myDiv3.style.backgroundColor="darkseagreen";
+    myDiv3.style.color="white";
+    myDiv2.appendChild(myDiv3);
+
+
+    const p1 = document.createElement("h1");
+    p1.style.backgroundColor="black";
+    p1.style.color="white";
+    p1.style.width="100%";
+    p1.innerHTML = `${val[i].name.common}`;
+
+    const p2 = document.createElement("p");
+    p2.textContent = `Capital:${val[i].capital}`;
+
+    const p3 = document.createElement("p");
+    p3.textContent = `Region:${val[i].region}`;
+
+    const p4 = document.createElement("p");
+    p4.textContent = `Country Code:${val[i].cca3}`;
+
+    const p5 = document.createElement("img");
+    p5.src = `${val[i].flags.png}`;
+    
+    let newBtn = document.createElement('button');
+    newBtn.setAttribute("class","btn-primary");
+
+    const link=document.createElement('a');
+    link.innerHTML="Click for Weather";
+    link.style.color="white";
+    link.setAttribute("target","_blank");
+    link.setAttribute("href",url);
+    newBtn.appendChild(link);
+
+
+    myDiv3.appendChild(p1);
+    myDiv3.appendChild(p5);
+    myDiv3.appendChild(p2);
+    myDiv3.appendChild(p3);
+    myDiv3.appendChild(p4);
+    myDiv3.append(newBtn);
     }
   }    
 })
 .catch((err)=>{
-    console.log("Error:",err);
-})
-
-
-
-// var body = document.getElementsByTagName("body")[0];
-// for (var y=0; y<2; y++){ // creates rows    
-//     var createRow = document.createElement("div");
-//       for (var x=0; x<4; x++){ // creates columns
-//       var createColumn = document.createElement("div");
-//         var createCard = document.createElement("div");
-//           var createText = document.createElement("p");
-//             var cellText = document.createTextNode("test");
-
-//             createText.appendChild(cellText);
-//             createCard.appendChild(createText);
-//             createColumn.appendChild(createCard);
-//             createRow.appendChild(createColumn);
-//             body.appendChild(createRow);
-
-//         createCard.setAttribute("class", "card");
-//       createColumn.setAttribute("class", "column");
-//       }
-//     createRow.setAttribute("class", "row");
-//   }
+     console.log("Error:",err);
+    // myDiv.innerHTML="err";
+ });
