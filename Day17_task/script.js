@@ -1,5 +1,3 @@
-
-
 const apiURL="https://restcountries.com/v3.1/all";
 
 fetch(apiURL)
@@ -39,10 +37,11 @@ for(let i=0; i<val.length; i++){
     myDiv2.appendChild(myDiv3);
 
 
-    const p1 = document.createElement("h1");
+    const p1 = document.createElement("div");
     p1.style.backgroundColor="black";
     p1.style.color="white";
-    p1.style.width="100%";
+    p1.style.fontSize="30px";
+    p1.style.float="inline";
     p1.innerHTML = `${val[i].name.common}`;
 
     const p2 = document.createElement("p");
@@ -56,6 +55,7 @@ for(let i=0; i<val.length; i++){
 
     const p5 = document.createElement("img");
     p5.src = `${val[i].flags.png}`;
+    p5.style.padding="10px";
     
     let newBtn = document.createElement('button');
     newBtn.setAttribute("class","btn-primary");
