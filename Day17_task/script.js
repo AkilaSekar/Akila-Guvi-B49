@@ -79,5 +79,4 @@ for(let i=0; i<val.length; i++){
 })
 .catch((err)=>{
      console.log("Error:",err);
-    // myDiv.innerHTML="err";
  });
