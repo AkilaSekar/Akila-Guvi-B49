@@ -3,9 +3,15 @@ const table = document.getElementById("dataTable");
 
 form.addEventListener("submit", function (event) {
   event.preventDefault();
-  debugger;
-  const name = document.getElementById("name").value;
+  
+  const firstname = document.getElementById("firstname").value;
+  const lastname = document.getElementById("lastname").value;
   const gender = document.querySelector('input[name="gender"]:checked').value;
+  const address = document.getElementById("address").value;
+  const pincode = document.getElementById("pin").value;
+  const state = document.getElementById("state").value;
+  const country = document.getElementById("country").value;
+
   const foodcheckboxes = document.querySelectorAll(
     'input[name="food"]:checked'
   );
@@ -18,13 +24,24 @@ form.addEventListener("submit", function (event) {
     return;
   }
 
-  const newRow = table.insertRow(); //document.createElement("tr");
-  const nameCol = newRow.insertCell(); //document.createElement("td");
-  const genderCol = newRow.insertCell(); //document.createElement("td");
-  const foodCol = newRow.insertCell(); //document.createElement("td");
+  const newRow = table.insertRow(); 
+  const firstnameCol = newRow.insertCell();
+  const lastnameCol = newRow.insertCell();
+  const genderCol = newRow.insertCell();
+  const foodCol = newRow.insertCell(); 
+  const addressCol = newRow.insertCell();
+  const pincodeCol = newRow.insertCell();
+  const stateCol = newRow.insertCell();
+  const countryCol = newRow.insertCell();
+  
 
-  nameCol.textContent = name;
+  firstnameCol.textContent = firstname;
+  lastnameCol.textContent = lastname;
   genderCol.textContent = gender;
+  addressCol.textContent = address;
+  pincodeCol.textContent = pincode;
+  stateCol.textContent = state;
+  countryCol.textContent = country;
   foodCol.textContent = foodChoices.join(", ");
 
   form.reset();

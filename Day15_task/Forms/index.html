@@ -9,33 +9,69 @@
   <body>
     <div class="container">
       <form id="myform">
-        <label for="name">Name:</label>
-        <input id="name" type="text" />
-
+        <div class="form-group">
+        <label for="firstname">First Name:</label>
+        <input id="firstname" type="text" />
+        &nbsp &nbsp &nbsp
+        <label for="lastname">Last Name:</label>
+        <input id="lastname" type="text" />
+      </div>
+      <br>
+      
+      <div class="form-group">
         <label>Gender:</label>
-        <input type="radio" name="gender" value="male" /> Male
-        <input type="radio" name="gender" value="female" /> Female
-
+        <input type="radio" name="gender" value="Male" /> Male &nbsp &nbsp
+        <input type="radio" name="gender" value="Female" /> Female
+      </div><br>
+      <div class="form-group">
         <label>Choice of food: </label>
-        <input type="checkbox" name="food" value="Pizza" /> Pizza
-        <input type="checkbox" name="food" value="Burger" /> Burger
-        <input type="checkbox" name="food" value="Pasta" /> Pasta
-        <input type="checkbox" name="food" value="Sushi" /> Sushi
-        <input type="checkbox" name="food" value="Salad" /> Salad
-
+        <input type="checkbox" name="food" value="Idly" /> Idly   &nbsp
+        <input type="checkbox" name="food" value="Dosa" /> Dosa &nbsp
+        <input type="checkbox" name="food" value="Poori" /> Poori &nbsp
+        <input type="checkbox" name="food" value="Pongal" /> Pongal &nbsp
+        <input type="checkbox" name="food" value="Rice" /> Rice
+      </div><br>
+      <div class="form-group">
+        <label for="address">Address:</label>
+        <textarea id="address" type="text"></textarea>
+      </div>
+      <br>
+      
+      <div class="form-group">
+        <label for="pin">Pincode:</label>
+        <input id="pin" type="number" />
+      </div>
+      <br>
+      <div class="form-group">
+        <label for="state">State:</label>
+        <input id="state" type="text" />
+      </div>
+      <br>
+      <div class="form-group">
+        <label for="country">Country:</label>
+        <input id="country" type="text" />
+      </div>
+      <br>
+      <div>
         <button type="submit">Submit</button>
+      </div><br>
       </form>
 
       <table id="dataTable">
         <thead>
           <tr>
-            <th>Name</th>
+            <th>First Name</th>
+            <th>Last Name</th>
             <th>Gender</th>
             <th>Food</th>
+            <th>Address</th>
+            <th>Pincode</th>
+            <th>State</th>
+            <th>Country</th>
           </tr>
         </thead>
       </table>
     </div>
-    <script src="form.js"></script>
+    <script src="script.js"></script>
   </body>
 </html>
