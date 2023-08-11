@@ -19,9 +19,6 @@ fetch(apiURL)
     myDiv.appendChild(myDiv1);
     
 for(let i=0; i<val.length; i++){
-
-  
-    //if(i<3){
     var lat = val[i].latlng[0];
     var long = val[i].latlng[1];
     var url = `https://api.openweathermap.org/data/2.5/weather?lat=${lat}&lon=${long}&appid=37ba9824a231c697643e4a57ef092cf6`;

@@ -1,0 +1,13 @@
+.container{
+    justify-content: center;
+    text-align: center;
+    width: 500px;
+    height: 500px;
+    font: 20px;
+    background-color: pink;
+    margin: auto;
+    padding:"20px";
+    border: 3px solid pink;
+    border-radius: 30px;
+    box-shadow:10px 10px;
+}
