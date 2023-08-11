@@ -20,7 +20,7 @@ fetch(apiURL)
     
 for(let i=0; i<val.length; i++){
 
-  if(val[i].name.common=="India" ||  val[i].name.common=="China" ||val[i].name.common=="Russia"  ){
+  
     //if(i<3){
     var lat = val[i].latlng[0];
     var long = val[i].latlng[1];
@@ -76,7 +76,7 @@ for(let i=0; i<val.length; i++){
     myDiv3.append(newBtn);
     }
   }    
-})
+)
 .catch((err)=>{
      console.log("Error:",err);
  });
