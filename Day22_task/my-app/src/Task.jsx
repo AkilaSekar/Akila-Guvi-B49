@@ -4,14 +4,12 @@ export class Task extends Component {
   render() {
 
     return React.createElement('div',{className:"wrapper"},
-
     React.createElement('div',{className:"table basic"},
     React.createElement('div',{className:"price-section"},
     React.createElement('div',{className:"price-area"},
     React.createElement('div',{className:"inner-area"},
     React.createElement('i',{className:"fa fa-inr"}),
-    React.createElement('span',{className:"price"},"00"
-    )))),
+    React.createElement('span',{className:"price"},"00")))),
     React.createElement('div',{className:"package-name"}),
     React.createElement('div',{className:"features"},
     React.createElement('li',null,
@@ -27,15 +25,12 @@ export class Task extends Component {
     React.createElement('span',{className:"list-name"},"Lifetime Template Updates"),
     React.createElement('span',{className:"icon cross"},React.createElement('i',{className:"far fa-times-circle"}))),
     React.createElement('div',{className:"btn"},React.createElement('button',null,"Purchase")))),
-
-
     React.createElement('div',{className:"table Premium"},
     React.createElement('div',{className:"price-section"},
     React.createElement('div',{className:"price-area"},
     React.createElement('div',{className:"inner-area"},
     React.createElement('i',{className:"fa fa-inr"}),
-    React.createElement('span',{className:"price"},"49"
-    )))),
+    React.createElement('span',{className:"price"},"49")))),
     React.createElement('div',{className:"package-name"}),
     React.createElement('div',{className:"features"},
     React.createElement('li',null,
@@ -51,15 +46,12 @@ export class Task extends Component {
     React.createElement('span',{className:"list-name"},"Lifetime Template Updates"),
     React.createElement('span',{className:"icon cross"},React.createElement('i',{className:"far fa-times-circle"}))),
     React.createElement('div',{className:"btn"},React.createElement('button',null,"Purchase")))),
-
-
     React.createElement('div',{className:"table Ultimate"},
     React.createElement('div',{className:"price-section"},
     React.createElement('div',{className:"price-area"},
     React.createElement('div',{className:"inner-area"},
     React.createElement('i',{className:"fa fa-inr"}),
-    React.createElement('span',{className:"price"},"99"
-    )))),
+    React.createElement('span',{className:"price"},"99")))),
     React.createElement('div',{className:"package-name"}),
     React.createElement('div',{className:"features"},
     React.createElement('li',null,
@@ -75,10 +67,7 @@ export class Task extends Component {
     React.createElement('span',{className:"list-name"},"Lifetime Template Updates"),
     React.createElement('span',{className:"icon cross"},React.createElement('i',{className:"far fa-times-circle"}))),
     React.createElement('div',{className:"btn"},React.createElement('button',null,"Purchase")))),
-
-
     )
   }
 }
-
 export default Task
