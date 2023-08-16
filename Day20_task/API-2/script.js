@@ -7,6 +7,10 @@ fetch(apiURL)
 })
 .then((val)=>{
     for(let i=0; i<val.length; i++){
+
+
+
+        
         console.log(val[i]._id);
         console.log(val[i].user);
         console.log(val[i].text);

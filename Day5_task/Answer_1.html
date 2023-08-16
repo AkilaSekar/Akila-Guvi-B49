@@ -35,15 +35,10 @@
         "Javascript",
         "HTML",
         "CSS"
-        ]
-    
-
-    
+        ]      
 };
 // printing the whole object
 console.log(resumeData);
-
-
 
 //for in
 console.log("---------------------------for in loop---------------------------");
@@ -53,7 +48,6 @@ for (var key in resumeData) {
   
 }
 
-
 // for of
 console.log("---------------------------for of loop---------------------------");
 var entries = Object.entries(resumeData);
@@ -62,9 +56,6 @@ for (var [key, value] of entries) {
   console.log(key + ": " + value);
 }
 
-
-
-
 // foreach
 console.log("---------------------------foreach loop---------------------------");
 var entries = Object.entries(resumeData);
@@ -72,8 +63,6 @@ var entries = Object.entries(resumeData);
 entries.forEach(function([key, value]) {
   console.log(key + ": " + value);
 });
-
-
 
     </script>
   </body>
