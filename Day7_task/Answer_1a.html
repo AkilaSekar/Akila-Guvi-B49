@@ -13,8 +13,6 @@
 
       //Open the request
       xhr.open(method, url);
-      
-
       xhr.onload = function () {
         if (xhr.status === 200) {
           //Request was successful
@@ -33,7 +31,6 @@
           console.log("Request failed", xhr.status);
         }
       };
-
       //send the request
       xhr.send();
     </script>
