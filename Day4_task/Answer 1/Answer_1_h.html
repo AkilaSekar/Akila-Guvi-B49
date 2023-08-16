@@ -9,10 +9,8 @@
     var rotations = 4;
     var length = arr.length;
     rotations = rotations % length; 
-
-
     let rotateFunction=function(){
-    console.log("-------------------------------Anonymous Function---------------------");  
+    console.log("-------------------------------Anonymous Function-------------------");  
     for (var i = 0; i < rotations; i++) {
       var temp = arr.pop();
       arr.unshift(temp);
@@ -20,21 +18,16 @@
     console.log(arr);
     }
     rotateFunction();
-    // arr=[];
-    // arr=[1, 2, 3, 4, 5];
 
     (function() {
       console.log("-------------------------------IIFE Function---------------------");  
     // Rotate the array
-
     for (var i = 0; i < rotations; i++) {
       var temp = arr.pop();
       arr.unshift(temp);
     }
     console.log(arr);
-  }
-
-  
+  } 
 )();
 
     </script>

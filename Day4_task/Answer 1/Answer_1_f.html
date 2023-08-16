@@ -18,25 +18,23 @@
       console.log("-------------------------------Anonymous Function---------------------");  
         if (length % 2 === 0) {
           median = (merged[length / 2 - 1] + merged[length / 2]) / 2;
-        } else {
+        } 
+        else {
           median = merged[Math.floor(length / 2)];
         }
-
-          console.log(median);
+        console.log(median);
           }
       anonMedian();
       median=0;
     
-
     //median using IIFE function
-    (function() {
-      console.log("-------------------------------IIFE Function---------------------");  
-        if (length % 2 === 0) {
-          median = (merged[length / 2 - 1] + merged[length / 2]) / 2;
-        } else {
-          median = merged[Math.floor(length / 2)];
-        }
-
+        (function() {
+          console.log("-------------------------------IIFE Function---------------------");  
+            if (length % 2 === 0) {
+              median = (merged[length / 2 - 1] + merged[length / 2]) / 2;
+            } else {
+              median = merged[Math.floor(length / 2)];
+            }
   console.log(median);
 })();
 
