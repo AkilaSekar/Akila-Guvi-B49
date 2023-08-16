@@ -7,8 +7,7 @@ class Circle{
         }
         if(typeof(color)!=="undefined"){
             this.color=color;
-        }
-        
+        }   
     }
     get _radius(){
         return this.radius;
@@ -42,8 +41,6 @@ console.log(obj._area);
 console.log(obj._circumference);
 console.log(obj.toString());
 var obj2=new Circle(2);
-//obj._radius=3;
-//obj2._color="Pink";
 console.log("After",obj2._radius);
 console.log(obj2._color);
 console.log(obj2._area);

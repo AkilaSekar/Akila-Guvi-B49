@@ -28,7 +28,6 @@ class Person{
         this.place=newPlace;
     }
 }
-
 var obj=new Person("Akila",25,"Salem","Tamil","XYZ India");
 console.log(obj.all_details);
 console.log("Old Name:",obj._name);

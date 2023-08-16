@@ -28,7 +28,6 @@ class Uber{
         totalPrice = baseFare + distanceCost + durationCost;
         console.log("The total price for the drive is Rs.",totalPrice);
     }
-
 }
 var baseFare, ratePerKm, ratePerMin,distanceCost,durationCost,totalPrice;
 var obj= new Uber("bike",1,1);
