@@ -34,7 +34,6 @@ table.appendChild(headerRow);
 // Create table rows from data
 data.forEach(rowData => {
     const row = document.createElement("tr");
-
     rowData.forEach(cellData => {
         const cell = document.createElement("td");
         cell.textContent = cellData;
@@ -48,7 +47,6 @@ data.forEach(rowData => {
 // Append the table to the container
 tableContainer.appendChild(table);
     }
-
 
 })
 .catch((err)=>{

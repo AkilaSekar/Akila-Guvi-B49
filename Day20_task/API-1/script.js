@@ -108,8 +108,6 @@ fetch(apiURL)
      myDiv.appendChild(link);
  }    
 )
-
-
 .catch((err)=>{
      console.log("Error:",err);
  });
