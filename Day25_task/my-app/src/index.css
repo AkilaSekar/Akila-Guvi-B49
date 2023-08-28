@@ -1,0 +1,24 @@
+.card {
+    width: 300px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    padding: 16px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  }
+  .card-title {
+    font-size: 1.5rem;
+    margin: 0;
+  }
+  .card-content {
+    margin-top: 8px;
+  }
+  .element {
+    margin: 180px; /* Adds 10px of space around the element */
+    /* background-color: lightgray; */
+    padding: 5  px;
+  }
+  .element1 {
+    margin: 50px; /* Adds 10px of space around the element */
+    background-color: lightgray;
+    padding: 5  px;
+  }
