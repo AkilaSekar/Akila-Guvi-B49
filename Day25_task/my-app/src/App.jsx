@@ -8,6 +8,8 @@ function App() {
   const [inputValue1, setInputValue1] = useState('');
   const [submittedValue, setSubmittedValue] = useState('');
   const [submittedValue1, setSubmittedValue1] = useState('');
+  const [showComponent, setShowComponent] = useState(false);
+  const cardsData={submittedValue,submittedValue1};
 
   const handleInputChange = event => {
     setInputValue(event.target.value);
@@ -19,13 +21,12 @@ function App() {
   };
 
   const handleSubmit = event => {
-    event.preventDefault();
+     event.preventDefault();
     setSubmittedValue(inputValue);
-    event.preventDefault();
     setSubmittedValue1(inputValue1);
+    setShowComponent(true);
   };
-
-  // function
+  
 
   return (
     <div>
@@ -43,10 +44,19 @@ function App() {
           placeholder="Todo Description"
         />
         <button type="submit">Submit</button>
+        {/* {showComponent && <Todo submittedValue={submittedValue} submittedValue1={submittedValue1} />} */}
+        
+        {showComponent && (
+        <div className="card-list">
+          {cardsData.map(card => (
+           <Todo submittedValue={submittedValue} submittedValue1={submittedValue1} />
+          ))}
+        </div>
+      )}
+
       </form>
-      <Todo submittedValue={submittedValue} submittedValue1={submittedValue1} />
+      
     </div>
   )
 }
-
 export default App
