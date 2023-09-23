@@ -1,42 +1,20 @@
 import { useState } from 'react'
+import reactLogo from './assets/react.svg'
+import viteLogo from '/vite.svg'
 import './App.css'
-import Todo from './Todo'
+import TodoApp from './TodoApp'
+
 
 
 function App() {
-  const [showComponentB, setShowComponentB] = useState(false);
-  const [inputValue, setInputValue] = useState('');
-
-  const handleClick = () => {
-    setShowComponentB(true);
-  };
-
-  const handleInputChange = (e) => {
-    setInputValue(e.target.value);
-  };
+  const [count, setCount] = useState(0)
 
   return (
     <>
-    <h3>My todo</h3>
-    <div className='divClass'>
-      <input 
-            type="text" 
-            placeholder="Todo Name" 
-            value={inputValue}
-            onChange={handleInputChange}>
-      </input> 
-      {/* <input  
-            type="text" 
-            placeholder="Todo Description">
-            value={inputValue}
-            onChange={handleInputChange}
-            
-      </input> */}
-      <button onClick={handleClick}>Add Todo</button>
-      {showComponentB && <Todo inputValue={inputValue} />}
-      
-    </div>
+     
+     <TodoApp/>
     </>
   )
 }
+
 export default App
